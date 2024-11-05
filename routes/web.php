@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [SiteController::class, 'index'])->name('site.index');
 Route::get('/contato', [ContatoController::class, 'contato'])->name('site.contato'); 
-Route::post('/contato', [ContatoController::class, 'contato'])->name('site.contato'); 
+Route::post('/contato', [ContatoController::class, 'salvar'])->name('site.contato'); 
 Route::get('/sobre', [SobreController::class, 'sobre'])->name('site.sobre');
 Route::get('/login', function(){ return 'Login';})->name('site.login');
 
